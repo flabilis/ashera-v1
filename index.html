@@ -14,7 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Font awsome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- popup-->
     <link rel="stylesheet" href="css/animate.css">
     <!-- preloader css-->    
@@ -218,17 +218,33 @@
                             </div>
                             <div class="timeline-body">
                                 <p>
-                                    <i class="fas fa-check"></i> Rebranding
+                                    <span class="done">
+                                        <i class="fas fa-check"></i> Rebranding
+                                    </span>
                                     <br>
-                                    <i class="fas fa-check"></i> New Tokenomics, Whitepaper, and Roadmap
+                                    <span class="done">
+                                        <i class="fas fa-check"></i> New Tokenomics, Whitepaper, and Roadmap
+                                    </span>
                                     <br>
-                                    <i class="fas fa-check"></i> Website v1
+                                    <span class="done">
+                                        <i class="fas fa-check"></i> Website v1
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Solana Explorer Listing
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Airdrop
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Solana Beach Listing
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Solana Explorer Listing
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> New Market ID
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Solana Beach Listing
+                                    </span>
+                                    <br>
+                                    <span>
+                                        <i class="fas fa-spinner"></i> New Market ID
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -241,15 +257,29 @@
                             </div>
                             <div class="timeline-body">
                                 <p>
-                                    <i class="fas fa-spinner"></i> Discord Price Bot
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Discord Price Bot
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Discord Tip Bot
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Discord Tip Bot
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Ashera DEX
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Ashera DEX
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Ashera Tools
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Ashera Tools
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Website v2
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Website v2
+                                    </span>
+                                    <br>
+                                    <span class="burn">
+                                        <i class="fas fa-fire"></i> Burn
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -262,9 +292,17 @@
                             </div>
                             <div class="timeline-body">
                                 <p>
-                                    <i class="fas fa-spinner"></i> Dashboard Wallet
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Dashboard Wallet
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> NFT Marketplace
+                                    <span>
+                                        <i class="fas fa-spinner"></i> NFT Marketplace
+                                    </span>
+                                    <br>
+                                    <span class="burn">
+                                        <i class="fas fa-fire"></i> Burn
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -277,13 +315,21 @@
                             </div>
                             <div class="timeline-body">
                                 <p>
-                                    <i class="fas fa-spinner"></i> Staking
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Staking & Farming
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Farming
+                                    <span>
+                                        <i class="fas fa-spinner"></i> Coingecko Listing
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> Coingecko Listing
+                                    <span>
+                                        <i class="fas fa-spinner"></i> CMC Listing
+                                    </span>
                                     <br>
-                                    <i class="fas fa-spinner"></i> CoinMarketCap Listing
+                                    <span class="burn">
+                                        <i class="fas fa-fire"></i> Burn
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -312,48 +358,50 @@
     <script src="js/custom.js"></script>
     <script src="js/chart.js"></script>
     <script type="text/javascript">
-        $( "#tokenomics" ).scroll(function() {
-                $("#lastChart").drawDoughnutChart([
-                    { title: "Burned", value : 1800000000,  color: "#2C3E50" },
-                    { title: "Airdropped", value:  1200000000,   color: "#FC4349" },
-                    { title: "Remaining Balance", value:  7000000000,   color: "#6DBCDB" }
-                ]);
+        $(function(){
+            $("#lastChart").drawDoughnutChart([
+                { title: "Burned", value : 1800000000,  color: "#2C3E50" },
+                { title: "Airdropped", value:  1200000000,   color: "#FC4349" },
+                { title: "Remaining Balance", value:  7000000000,   color: "#6DBCDB" }
+            ]);
 
-                const lastChartTotal = 10000000000;
+            const lastChartTotal = 10000000000;
 
-                $('#lastChart .doughnutSummaryNumber').each(function () {
-                    $(this).prop('Counter',0).animate({
-                        Counter: lastChartTotal
-                    }, {
-                        duration: 7000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                        }
-                    });
+            $('#lastChart .doughnutSummaryNumber').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: lastChartTotal
+                }, {
+                    duration: 7000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                    }
                 });
-                $("#newChart").drawDoughnutChart([
-                    { title: "Tokyo",         value : 120,  color: "#2C3E50" },
-                    { title: "San Francisco", value:  80,   color: "#FC4349" },
-                    { title: "New York",      value:  70,   color: "#6DBCDB" },
-                    { title: "London",        value : 50,   color: "#F7E248" },
-                    { title: "Sydney",        value : 40,   color: "#D7DADB" },
-                    { title: "Berlin",        value : 20,   color: "#FFF" }
-                ]);
+            });
+        });
+        $(function(){
+            $("#newChart").drawDoughnutChart([
+                { title: "Tokyo",         value : 120,  color: "#2C3E50" },
+                { title: "San Francisco", value:  80,   color: "#FC4349" },
+                { title: "New York",      value:  70,   color: "#6DBCDB" },
+                { title: "London",        value : 50,   color: "#F7E248" },
+                { title: "Sydney",        value : 40,   color: "#D7DADB" },
+                { title: "Berlin",        value : 20,   color: "#FFF" }
+            ]);
 
-                const lastChartTotal = 7000000000;
+            const newChartTotal = 7000000000;
 
-                $('#newChart .doughnutSummaryNumber').each(function () {
-                    $(this).prop('Counter',0).animate({
-                        Counter: lastChartTotal
-                    }, {
-                        duration: 7000,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-                        }
-                    });
+            $('#newChart .doughnutSummaryNumber').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: newChartTotal
+                }, {
+                    duration: 7000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                    }
                 });
+            });
         });
     </script>
 </body>
