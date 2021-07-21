@@ -73,7 +73,7 @@
             <div class="col-12 col-md-12 col-lg-12">
                 <div class="intro-text">
                     <h1>ASHERA</h1>
-                    <p>Ashera is #1 cat meme token in Solana Ecosystem</p>
+                    <span class="typing"></span>
                     <div class="btn_video_wrapper">
                         <a href="#" class="btn btn-default btn-default-style">Buy ASHERA</a>                       
                     </div>
@@ -357,6 +357,7 @@
     <script src="js/wow.min.js"></script> 
     <script src="js/custom.js"></script>
     <script src="js/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script type="text/javascript">
         $(function(){
             $("#lastChart").drawDoughnutChart([
@@ -403,6 +404,14 @@
                 });
             });
         });
+        const options = {
+          strings: ['<b>Ashera</b> is #1 cat meme token in Solana Ecosystem.', 'Re-birth token.'],
+          typeSpeed: 60,
+          loop: true
+        };
+
+        const typed = new Typed('.typing', options);
+        
     </script>
 </body>
 </html>

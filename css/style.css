@@ -2890,3 +2890,10 @@ ul.roadmap {
 .timeline-body .burn {
   color: #e74c3c;
 }
+.typing {
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 10px;
+  font-weight: 400;
+  color: #ffffff;
+}
