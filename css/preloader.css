@@ -30,6 +30,7 @@
     z-index: 1001;
 }
 #loader img {
+    width: 75%;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }

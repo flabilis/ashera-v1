@@ -6,10 +6,19 @@
     <meta name="description" content="Ashera #1 cat meme token in Solana Ecosystem">
     <meta name="keywords" content="Ashera, token, ashera token, ashera sol, sol ashera, ASH, Solana, ashera dex, ashera tools, ashera bot, airdrop, ashera airdrop ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ashera Solana" />
-    <meta name="twitter:description" content="Ashera - Re-birth token and will be #1 cat meme token in Solana Ecosystem." />
-    <meta name="twitter:image" content="images/ashera-white-text.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ashera">
+    <meta property="og:description" content="Ashera - Re-birth token and will be #1 cat meme token in Solana Ecosystem.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/asherasol/brand/main/logo/ashera-white-text.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Ashera">
+    <meta property="twitter:description" content="Ashera - Re-birth token and will be #1 cat meme token in Solana Ecosystem.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/asherasol/brand/main/logo/ashera-white-text.png">
+
     <title>Ashera</title>
     <link rel="shortcut icon" href="images/ashera.png" type="image/x-icon">
     <!-- Goole Font -->
@@ -47,7 +56,7 @@
     <!-- START NAVBAR -->
     <nav class="navbar navbar-expand-md navbar-light bg-faded cripto_nav">
         <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button">
                 <i class="fas fa-bars"></i>
             </button>
             <a class="navbar-brand"  data-scroll  href="index.html">
@@ -67,7 +76,7 @@
                 </ul>
             </div>
             <div class="language">
-                <a href="#" class="token d-none d-md-block">Buy token</a>
+                <a href="#" class="token d-none d-md-block">Launch App</a>
             </div>
         </div>
     </nav><!-- END NAVBAR -->
@@ -78,7 +87,7 @@
                     <h1>ASHERA</h1>
                     <span class="typing"></span>
                     <div class="btn_video_wrapper">
-                        <a href="#" class="btn btn-default btn-default-style">Buy ASHERA</a>                       
+                        <a href="#" class="btn btn-default btn-default-style">Launch App</a>                       
                     </div>
                 </div>
             </div>              
@@ -186,16 +195,29 @@
         </div> 
         <div class="row" style="margin-bottom: 100px;">                  
             <div class="col-sm-12 col-md-12 col-lg-6">
-                <div style="text-align: center; margin-bottom: 70px;">
+                <div class="chart_title">
                     <h3 style="color: #ffffff;">Last Tokenomics</h3>
                 </div>
                <div id="lastChart" class="chart"></div>
+               <div class="legend">
+                   <button type="button" class="btn" style="background: #e74c3c;"></button> Burned (18%)
+                   <button type="button" class="btn" style="background: #2c3e50;"></button> Airdropped (12%)
+                   <button type="button" class="btn" style="background: #2ecc71;"></button> Remaining Balance (70%)
+               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-6" id="sec_chart">
-                <div style="text-align: center; margin-bottom: 70px;">
+                <div class="chart_title">
                     <h3 style="color: #ffffff;">New Tokenomics</h3>
                 </div>
                <div id="newChart" class="chart"></div>
+               <div class="legend">
+                   <button type="button" class="btn" style="background: #2ecc71;"></button> Airdrop (10%)
+                   <button type="button" class="btn" style="background: #f1c40f;"></button> Farming and Staking (20%)
+                   <button type="button" class="btn" style="background: #3498db;"></button> Marketing and Growth (15%)
+                   <button type="button" class="btn" style="background: #e67e22;"></button> Liquidity (20%)
+                   <button type="button" class="btn" style="background: #e74c3c;"></button> Burn (20%)
+                   <button type="button" class="btn" style="background: #2c3e50;"></button> Team (15%)
+               </div>
             </div> 
         </div>           
     </div> 
@@ -364,9 +386,9 @@
     <script type="text/javascript">
         $(function(){
             $("#lastChart").drawDoughnutChart([
-                { title: "Burned", value : 1800000000,  color: "#2C3E50" },
-                { title: "Airdropped", value:  1200000000,   color: "#FC4349" },
-                { title: "Remaining Balance", value:  7000000000,   color: "#6DBCDB" }
+                { title: "Burned", value : 1800000000,  color: "#e74c3c" },
+                { title: "Airdropped", value:  1200000000,   color: "#2c3e50" },
+                { title: "Remaining Balance", value:  7000000000,   color: "#2ecc71" }
             ]);
 
             const lastChartTotal = 10000000000;
@@ -385,12 +407,12 @@
         });
         $(function(){
             $("#newChart").drawDoughnutChart([
-                { title: "Tokyo",         value : 120,  color: "#2C3E50" },
-                { title: "San Francisco", value:  80,   color: "#FC4349" },
-                { title: "New York",      value:  70,   color: "#6DBCDB" },
-                { title: "London",        value : 50,   color: "#F7E248" },
-                { title: "Sydney",        value : 40,   color: "#D7DADB" },
-                { title: "Berlin",        value : 20,   color: "#FFF" }
+                { title: "Airdrop", value : 700000000, color: "#2ecc71" },
+                { title: "Farming and Staking", value: 1400000000, color: "#f1c40f" },
+                { title: "Marketing and Growth", value:  1050000000, color: "#3498db" },
+                { title: "Liquidity", value : 1400000000, color: "#e67e22" },
+                { title: "Burn", value : 1400000000, color: "#e74c3c" },
+                { title: "Team", value : 1050000000, color: "#2c3e50" }
             ]);
 
             const newChartTotal = 7000000000;
@@ -415,6 +437,9 @@
 
         const typed = new Typed('.typing', options);
         
+        $(".navbar-toggler").click(function() {
+            $("#navbarSupportedContent").toggleClass('show');
+        });
     </script>
 </body>
 </html>
