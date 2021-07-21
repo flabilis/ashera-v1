@@ -2878,3 +2878,15 @@ ul.roadmap {
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
 }
+
+.timeline-body p span {
+  color: #ffffff;
+}
+
+.timeline-body .done {
+  color: #2ecc71;
+}
+
+.timeline-body .burn {
+  color: #e74c3c;
+}
